@@ -1,5 +1,6 @@
 body {
   font-family: "Open-sans", sans-serif;
+  font-size: 14px;
   background-color: #fd990b;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -9,28 +10,79 @@ img {
   max-width: 600px;
 }
 
-form {
-  background-color: antiquewhite;
-  text-align: center;
-  max-width: 600px;
-  border-radius: 20px;
-  padding: 20px;
-  margin: auto;
-}
-
-input {
-  margin-bottom: 20px;
-}
-
 h1,
 #top {
   text-align: center;
 }
 
-.content {
+form {
   background-color: antiquewhite;
-  max-width: 600px;
-  border-radius: 20px;
+  max-width: 500px;
   padding: 20px;
   margin: auto;
+  border-radius: 20px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+input {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 7px;
+  opacity: 50%;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+input::placeholder {
+  opacity: 0;
+}
+
+input:focus {
+  outline: 0;
+  border-radius: 0%;
+}
+
+input:focus::placeholder {
+  opacity: 1;
+  transition: 0.1s;
+}
+
+select {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 5px;
+  opacity: 50%;
+  border: 0;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+
+textarea {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 5px;
+  opacity: 50%;
+  border: 1px solid black;
+  position: relative;
+}
+
+button {
+  padding: 10px 20px;
+  display: block;
+  margin-inline: auto;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(100, 100, 255);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgba(100, 100, 255, 0.9);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
